@@ -19,6 +19,7 @@ namespace EventIO.Domain.ValueObjects
 
             try
             {
+                // Example: \\PatrickU
                 var index = accountString.IndexOf("\\", StringComparison.Ordinal);
                 account.Domain = accountString.Substring(0, index);
                 account.Name = accountString.Substring(index + 1);

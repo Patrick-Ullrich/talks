@@ -4,7 +4,7 @@ using System.Text;
 
 namespace EventIO.Application.Common.Interfaces
 {
-    public class IWeatherService
+    public interface IWeatherService
     {
     }
 }

@@ -12,7 +12,7 @@ namespace EventIO.Web.Controllers
     public class SessionsController : BaseController
     {
         [HttpGet]
-        public async Task<ActionResult<List<Session>>> GetAll()
+        public async Task<ActionResult<List<SessionListDto>>> GetAll()
         {
             return Ok(await Mediator.Send(new GetSessionsListQuery()));
         }
