@@ -10,7 +10,9 @@ namespace EventIO.Persistence.Configurations
         {
             builder.Property(e => e.SessionId).HasColumnName("SessionID");
 
-            builder.Property(e => e.Title).HasMaxLength(1000);
+            builder.Property(e => e.Title)
+                .IsRequired()
+                .HasMaxLength(1000);
         }
     }
 }

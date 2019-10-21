@@ -3,6 +3,7 @@ using EventIO.Application.Common.Middlewares;
 using MediatR;
 using AutoMapper;
 using Microsoft.Extensions.DependencyInjection;
+using EventIO.Application.Common.Behaviors;
 
 namespace EventIO.Application
 {
@@ -12,6 +13,7 @@ namespace EventIO.Application
         {
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestPerformanceBehaviour<,>));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestValidationBehavior<,>));
 
             return services;
