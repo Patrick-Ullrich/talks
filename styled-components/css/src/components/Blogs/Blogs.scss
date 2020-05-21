@@ -1,0 +1,55 @@
+@import "../../variables.scss";
+
+.blog-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  &__item {
+    margin: $spacing-related 0;
+
+    &--old {
+      > .blog {
+        &:hover {
+          cursor: not-allowed !important;
+        }
+      }
+    }
+
+    > .blog {
+      &:hover {
+        cursor: pointer;
+      }
+      border: 1px solid #ccc;
+      border-radius: 25px;
+      padding: 1.25rem 1rem;
+      text-align: left;
+
+      .blog__top-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .blog__time {
+        font-weight: 500;
+        color: $secondary-color;
+        font-size: 2rem;
+      }
+
+      .blog__title {
+        width: 50%;
+        border-bottom: 2px solid $primary-color;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

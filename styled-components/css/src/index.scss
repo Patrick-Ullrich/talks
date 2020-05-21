@@ -1,0 +1,28 @@
+@import "./variables";
+
+.main {
+  max-width: 960px;
+  margin: $spacing-unrelated auto 0;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  font-family: $font-primary;
+}
+
+h1 {
+  font-size: $font-size-h1;
+}
+
+h2 {
+  font-size: $font-size-h2;
+}
+
+p {
+  font-size: $font-size-regular;
+}
